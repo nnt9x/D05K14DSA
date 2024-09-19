@@ -9,6 +9,10 @@ public class Main {
         linkedList.insertAtBegin(4.0);
         linkedList.insertAtBegin(10.0);
 
+        linkedList.insertAtEnd(20.0);
+        linkedList.insertAtEnd(30.0);
+        linkedList.insertAtBegin(0.0);
+
         // Display
         linkedList.display();
     }

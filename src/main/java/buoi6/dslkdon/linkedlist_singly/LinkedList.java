@@ -22,6 +22,25 @@ public class LinkedList<T> {
         // B4: Dat lai head ve tmp
         head = tmp;
     }
+    // Them 1 phan tu vao cuoi
+    public void insertAtEnd(T t){
+        // B1: tao node
+        Node<T> tmp = new Node<>(t);
+        // B2: kiem tra head = null hay ko?
+        if(head == null){
+            head = tmp;
+            return;
+        }
+        // B3: head khong bang null ? => co du lieu
+        // Tim node cuoi hien tai
+        Node node = head;
+        while(node.getNext() != null){
+            node = node.getNext();
+        }
+        // Da tim dc node cuoi
+        node.setNext(tmp);
+    }
+
 
     // Ham display
     public void display() {
