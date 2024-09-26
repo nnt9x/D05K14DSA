@@ -40,6 +40,46 @@ public class LinkedList<T> {
         // Da tim dc node cuoi
         node.setNext(tmp);
     }
+    public void deleteAtBegin(){
+        // TH1: khong co phan tu nao
+        if(head == null){
+            throw new RuntimeException("Linked list is empty");
+        }
+        // TH2: chi co 1 phan tu head
+        if(head.getNext() == null){
+            head = null;
+        }
+        else {
+            // TH3: co it nhat 2 phan tu
+            Node newHead = head.getNext();
+            // Xoa lien ket
+            head.setNext(null);
+            // Tro head -> newHead
+            head = newHead;
+        }
+    }
+
+    public void deleteAtEnd(){
+        // TH1: ko co phan tu
+        if(head == null){
+            throw new RuntimeException("Linked list is empty");
+        }
+        // TH2: co 1 phan tu
+        if(head.getNext() == null){
+            head = null;
+        }
+        // TH3: co nhieu hon 2 phan tu
+        else{
+            // Tim ra phan tu gan cuoi ?
+            // Node.getNext().getNext() = null
+            Node node = head;
+            while (node.getNext().getNext() != null){
+                node = node.getNext();
+            }
+            // Da co gan cuoi
+            node.setNext(null);
+        }
+    }
 
 
     // Ham display

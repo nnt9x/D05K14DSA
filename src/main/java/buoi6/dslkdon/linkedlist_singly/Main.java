@@ -15,5 +15,16 @@ public class Main {
 
         // Display
         linkedList.display();
+        // 0.0-->10.0-->4.0-->-5.0-->3.5-->1.5-->20.0-->30.0-->End
+
+        linkedList.deleteAtBegin();
+        linkedList.deleteAtBegin();
+
+        // Xoa phan tu cuoi hang
+        linkedList.deleteAtEnd();
+        linkedList.deleteAtEnd();
+
+
+        linkedList.display();
     }
 }
